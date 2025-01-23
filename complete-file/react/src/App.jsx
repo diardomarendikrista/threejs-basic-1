@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import { Environment, OrbitControls } from "@react-three/drei";
 import Box from "Box";
 
 function App() {
@@ -7,6 +7,10 @@ function App() {
     <div id="canvas-container">
       <Canvas>
         <ambientLight />
+        <Environment
+          files="./cloudy_puresky_1k.hdr"
+          background
+        />
         <Box />
         <OrbitControls />
       </Canvas>
